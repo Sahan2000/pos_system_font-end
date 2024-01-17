@@ -21,6 +21,8 @@ $(document).ready(function (){
         loadingScreen2.style.display = 'none';
     });
 
+    $('#')
+
 });
 window.addEventListener('load',function (){
     const loadingScreen = document.querySelector('#sign_up_page');

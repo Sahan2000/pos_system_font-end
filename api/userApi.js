@@ -45,6 +45,12 @@ export class UserApi{
 
                         const loadingScreen1 = $('#dashboard_page');
                         loadingScreen1.show();
+
+                        const loadingScreen2 = $('#Home');
+                        loadingScreen2.show();
+
+                        const loadingScreen3 = $('#customer');
+                        loadingScreen3.hide();
                     }
                 },
                 error: function (xhr, status, error) {
