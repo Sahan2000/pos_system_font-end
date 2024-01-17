@@ -5,6 +5,9 @@ $(document).ready(function (){
 
         const loadingScreen1 = document.querySelector('#login_page');
         loadingScreen1.style.display = 'none';
+
+        const loadingScreen2 = document.querySelector('#dashboard_page');
+        loadingScreen2.style.display = 'none';
     });
 
     $('#signInBtn').eq(0).on('click',function (){
@@ -13,6 +16,9 @@ $(document).ready(function (){
 
         const loadingScreen1 = document.querySelector('#login_page');
         loadingScreen1.style.display = 'block';
+
+        const loadingScreen2 = document.querySelector('#dashboard_page');
+        loadingScreen2.style.display = 'none';
     });
 
 });
@@ -22,4 +28,7 @@ window.addEventListener('load',function (){
 
     const loadingScreen1 = document.querySelector('#login_page');
     loadingScreen1.style.display = 'block';
+
+    const loadingScreen2 = document.querySelector('#dashboard_page');
+    loadingScreen2.style.display = 'none';
 });
