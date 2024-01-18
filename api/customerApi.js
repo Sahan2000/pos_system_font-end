@@ -1,32 +1,56 @@
-let customer_id = $('#customerId');
-
-function showError(title, text) {
-    Swal.fire({
-        icon: 'error',
-        title: title,
-        text: text,
-        footer: '<a href="">Why do I have this issue?</a>'
-    });
-}
-
 export class CustomerApi{
 
     generateCustomerId(){
-        $.ajax({
-            url: "http://localhost:8080/page/customer",
-            type:"GET",
-            data :{
-                action : 'generateCustomerId'
-            },
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/page/customer",
+                data:{
+                    action: 'generateCustomerId'
+                },
+                success: function(response) {
+                    resolve(response);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('Error:', jqXHR.status, jqXHR.statusText);
+                    reject(new Error(`AJAX request failed with status ${jqXHR.status}`));
+                }
+            });
+        });
+    }
 
-            success:function (data){
-                console.log(data.customerId);
-                customer_id.val(data.customerId);
+    getCustomer(custId){
+        return $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/page/student?action=getStudent&studentId=" + stuId,
+            data:{
+                action: 'getCustomer',
+                customerId: custId
             },
-            error: function (xhr,status,error){
-                showError('Fetching Error', 'Error generating customer ID');
-                console.error('Error generating customer ID:', error);
-            }
-        })
+            contentType: "application/json", // Assuming the response is in JSON format
+        });
+    }
+
+    saveCustomer(customer){
+        let customerJson = JSON.stringify(customer);
+
+        const sendAjax = (customerJson)=>{
+            $.ajax({
+                url: "http://localhost:8080/page/customer",
+                type: "POST",
+                data: customerJson,
+                contentType: "application/json",
+                success: function (){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Customer Saved Successful',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        }
+        console.log('Save customer call');
+        sendAjax(customerJson);
     }
 }
