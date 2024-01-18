@@ -53,4 +53,15 @@ export class CustomerApi{
         console.log('Save customer call');
         sendAjax(customerJson);
     }
+
+    getAllCustomer(){
+        return $.ajax({
+            url: "http://localhost:8080/page/customer",
+            type:"GET",
+            data: {
+                action: 'getAllCustomer',
+            },
+            contentType: "application/json"
+        })
+    }
 }

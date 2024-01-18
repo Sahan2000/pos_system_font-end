@@ -54,6 +54,39 @@ function validation(value, message, test) {
     return true;
 }
 
+function populateCustomerTable(){
+    customerApi.getAllCustomer().then((customerDb)=>{
+        $('#customer-table-body').eq(0).empty();
+        customerDb.forEach((customer)=>{
+            $('#customer-table-body').eq(0).append(
+                `<tr>
+                    <th row="span">${customer.customerId}</th>
+                    <td>${customer.customerName}</td>
+                    <td>${customer.city}</td>
+                    <td>${customer.email}</td>
+                    <td>
+                            <button class="updateBtn btn btn-warning btn-sm" data-toggle="modal" data-target="#studentModal"
+                                data-student-id="${customer.customerId}">
+                                <i class="fa-solid fa-pen-to-square fa-bounce"></i>
+                            </button>
+                            <button class="deleteBtn btn btn-danger btn-sm" data-student-id="${customer.customerId}">
+                                <i class="fa-solid fa-trash fa-bounce" style="color: #1E3050;"></i>
+                            </button>
+                    </td>
+                       
+                </tr>`
+            )
+        });
+    }).catch((error) => {
+            console.log(error);
+            showError('fetch Unsuccessful', error);
+        });
+}
+
+$('#customer-table-body').eq(0).on('click','.deleteBtn', function (){
+
+})
+
 saveUpdateBtn.eq(0).on('click',function (){
     event.preventDefault();
     let customerIdValue = customerId.val();
@@ -77,6 +110,11 @@ saveUpdateBtn.eq(0).on('click',function (){
             customerApi.saveCustomer(customerModel);
         }
     }
+})
+
+customerPage.eq(0).on('click',function (){
+    console.log("hello lover");
+    populateCustomerTable();
 })
 
 function openCustomerModal(heading, buttonText, buttonClass, custId){
@@ -106,4 +144,6 @@ function openCustomerModal(heading, buttonText, buttonClass, custId){
             footer: '<a href="">Why do I have this issue?</a>'
         });
     }
+
+
 }
