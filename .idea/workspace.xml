@@ -8,9 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/userApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/UserModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pos_system_font-end.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pos_system_font-end.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +62,7 @@
       <workItem from="1705383580919" duration="123000" />
       <workItem from="1705417681430" duration="208000" />
       <workItem from="1705417901500" duration="26000" />
+      <workItem from="1705509298577" duration="961000" />
     </task>
     <task id="LOCAL-00001" summary="complete login page and sign up page">
       <option name="closed" value="true" />

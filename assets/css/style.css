@@ -7,7 +7,7 @@ video {
     object-fit: cover; /* Ensure the video covers the entire container */
 }
 
-.card{
+.card-box{
     margin-top: 260px!important;
     background: linear-gradient(to top right, #dfdee0 0%, #fcfbfd 100%);
 }
@@ -30,5 +30,9 @@ video {
 
 #sign_up_page{
     display: none;
+}
+
+.add-new-customerBtn{
+    width: 180px;
 }
 

@@ -18,7 +18,7 @@
                 Your browser does not support the video tag.
             </video>
             <div class="container">
-                <div class="container card col-4 mt-5 flex-wrap justify-content-center align-items-center text-center">
+                <div class="container card-box card col-4 mt-5 flex-wrap justify-content-center align-items-center text-center">
                     <form>
                         <h1 class="mb-3 mt-4">Login</h1>
                         <div class="mt-5 mb-3 text-start">
@@ -30,8 +30,8 @@
                             <input type="password" class="form-control" id="password">
                         </div>
                         <div class="mb-4 form-check text-start">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Show password</label>
+                            <input type="checkbox" class="form-check-input" id="showPassword">
+                            <label class="form-check-label" for="showPassword">Show password</label>
                         </div>
                         <button type="submit" id="login" class="btn btn-primary mb-4 w-100">Login</button>
                         <p>If you don't have an account?<a id="signUpBtn" href="#">Sign up</a></p>
@@ -50,7 +50,7 @@
                 Your browser does not support the video tag.
             </video>
             <div class="container">
-                <div class="container card col-4 mt-5 flex-wrap justify-content-center align-items-center text-center">
+                <div class="container card-box card col-4 mt-5 flex-wrap justify-content-center align-items-center text-center">
                     <form>
                         <h1 class="mb-3 mt-4">Sign up</h1>
                         <div class="mt-5 mb-3 text-start">
@@ -124,8 +124,64 @@
 
 <main id="customer">
     <div class="container-fluid">
-        <div class="container card col-12">
 
+        <div class="container customer-card card col-12 mt-5">
+            <div class="card-body">
+                <div class="container row">
+                    <h1 class="col-10">Customer Details</h1>
+                    <button id="addBtn" type="button" class="btn add-new-customerBtn btn-success col-2 ms-4 h-25 mt-3" data-bs-toggle="modal" data-bs-target="#customerModal"><i class="fa-solid fa-plus"></i>
+                        Add Customer
+                    </button>
+                </div>
+
+                <table class="table table-hover mt-3">
+                    <thead>
+                        <tr>
+                            <th class="bg-dark text-light" scope="col">ID</th>
+                            <th class="bg-dark text-light" scope="col">Customer Name</th>
+                            <th class="bg-dark text-light" scope="col">City</th>
+                            <th class="bg-dark text-light" scope="col">Email</th>
+                            <th class="bg-dark text-light" scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customer-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="addCustomerModelLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="customerFormHeading">Add New Customer</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="customerId" class="form-label">Customer ID :</label>
+                            <input type="text" class="form-control" id="customerId">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Customer Name :</label>
+                            <input type="text" class="form-control" id="customerName">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="city">Check me out</label>
+                            <input type="text" class="form-control" id="city">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerEmail" class="form-label">Email :</label>
+                            <input type="email" class="form-control" id="customerEmail">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save Customer</button>
+                </div>
+            </div>
         </div>
     </div>
 </main>

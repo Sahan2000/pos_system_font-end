@@ -19,7 +19,7 @@ export class UserApi{
             });
         }
 
-        console.log('SAve user call');
+        console.log('Save user call');
         sendAjax(userJson);
     }
 

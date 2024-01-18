@@ -23,7 +23,7 @@ signUpBtn.eq(0).on('click', function (){
     let confirm_passwordValue = confirm_password.val();
 
     if(passwordValue === confirm_passwordValue){
-        let userModel = new UserModel(nameValue,emailValue,passwordValue,confirm_passwordValue);
+        let userModel = new UserModel(nameValue,emailValue,passwordValue);
         userApi.saveUser(userModel);
     }
 });
