@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44706166-a4fe-4297-a22f-61c2eb349642" name="Changes" comment="few changes">
+    <list default="true" id="44706166-a4fe-4297-a22f-61c2eb349642" name="Changes" comment="complete save customer">
       <change beforePath="$PROJECT_DIR$/api/customerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/customerApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +40,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
@@ -64,6 +64,7 @@
       <workItem from="1705417901500" duration="26000" />
       <workItem from="1705509298577" duration="961000" />
       <workItem from="1705551329593" duration="8549000" />
+      <workItem from="1705561457829" duration="14232000" />
     </task>
     <task id="LOCAL-00001" summary="complete login page and sign up page">
       <option name="closed" value="true" />
@@ -97,7 +98,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705551742836</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="complete save customer">
+      <option name="closed" value="true" />
+      <created>1705567793933</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705567793933</updated>
+    </task>
+    <task id="LOCAL-00006" summary="complete save customer">
+      <option name="closed" value="true" />
+      <created>1705573274226</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705573274226</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="complete login page and sign up page" />
     <MESSAGE value="few changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="few changes" />
+    <MESSAGE value="complete save customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete save customer" />
   </component>
 </project>

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="api/customerApi.js"></script>
 </head>
 <body>
 <main id="login_page">
@@ -180,6 +181,70 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button id="saveUpdateBtn" type="button" class="btn btn-success">Save Customer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<main id="item">
+    <div class="container-fluid">
+
+        <div class="container item-card card col-12 mt-5">
+            <div class="card-body">
+                <div class="container row">
+                    <h1 class="col-10">Item Details</h1>
+                    <button id="addItemBtn" type="button" class="btn add-new-ItemBtn btn-success col-2 ms-4 h-25 mt-3" data-bs-toggle="modal" data-bs-target="#itemModal"><i class="fa-solid fa-plus"></i>
+                        Add Item
+                    </button>
+                </div>
+
+                <table class="table table-hover mt-3">
+                    <thead>
+                    <tr>
+                        <th class="bg-dark text-light" scope="col">Code</th>
+                        <th class="bg-dark text-light" scope="col">Item Description</th>
+                        <th class="bg-dark text-light" scope="col">Item qty</th>
+                        <th class="bg-dark text-light" scope="col">Item price</th>
+                        <th class="bg-dark text-light" scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody id="item-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="addItemModelLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="itemFormHeading">Add New Item</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="item_code" class="form-label">Item Code :</label>
+                            <input type="text" class="form-control" id="item_code">
+                        </div>
+                        <div class="mb-3">
+                            <label for="itemDescription" class="form-label">Description :</label>
+                            <input type="text" class="form-control" id="itemDescription">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="itemQty">Qty :</label>
+                            <input type="number" class="form-control" id="itemQty">
+                        </div>
+                        <div class="mb-3">
+                            <label for="itemPrice" class="form-label">Price :</label>
+                            <input type="text" class="form-control" id="itemPrice">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="saveUpdateItemBtn" type="button" class="btn btn-success">Save Item</button>
                 </div>
             </div>
         </div>

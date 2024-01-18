@@ -22,7 +22,7 @@ export class CustomerApi{
     getCustomer(custId){
         return $.ajax({
             type: "GET",
-            url: "http://localhost:8080/page/student?action=getStudent&studentId=" + stuId,
+            url: "http://localhost:8080/page/customer",
             data:{
                 action: 'getCustomer',
                 customerId: custId
@@ -32,26 +32,23 @@ export class CustomerApi{
     }
 
     saveCustomer(customer){
-        let customerJson = JSON.stringify(customer);
+        return new Promise((resolve, reject)=>{
+            let customerJson = JSON.stringify(customer);
 
-        const sendAjax = (customerJson)=>{
-            $.ajax({
-                url: "http://localhost:8080/page/customer",
-                type: "POST",
-                data: customerJson,
-                contentType: "application/json",
-                success: function (){
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Customer Saved Successful',
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                }
-            });
-        }
-        console.log('Save customer call');
-        sendAjax(customerJson);
+            const sendAjax = (customerJson)=>{
+                $.ajax({
+                    url: "http://localhost:8080/page/customer",
+                    type: "POST",
+                    data: customerJson,
+                    contentType: "application/json",
+                    success: function (responseText){
+                        resolve(responseText);
+                    }
+                });
+            }
+            console.log('Save customer call');
+            sendAjax(customerJson);
+        })
     }
 
     getAllCustomer(){
@@ -62,6 +59,42 @@ export class CustomerApi{
                 action: 'getAllCustomer',
             },
             contentType: "application/json"
+        })
+    }
+
+    deleteCustomer(custId){
+            return new Promise((resolve, reject) => {
+                $.ajax({
+                    type: "DELETE",
+                    url: "http://localhost:8080/page/customer?customerId="+custId,
+                    success: function(responseText) {
+                        console.log("Nipun");
+                        resolve(responseText);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        reject(new Error(`AJAX request failed with status ${jqXHR.status}`));
+                    }
+                });
+            });
+    }
+
+    updateCustomer(customer){
+        return new Promise((resolve,reject)=>{
+            let customerJson = JSON.stringify(customer);
+
+            const sendAjax = (customerJson)=>{
+                $.ajax({
+                    url:"http://localhost:8080/page/customer",
+                    type:"PUT",
+                    data: customerJson,
+                    contentType: "application/json",
+                    success: function (responseText){
+                        resolve(responseText);
+                    }
+                })
+            }
+            console.log("customer update call");
+            sendAjax(customerJson);
         })
     }
 }
