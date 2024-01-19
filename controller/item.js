@@ -20,6 +20,16 @@ function showError(tittle, text) {
     });
 }
 
+function clearInputs(){
+    description.val('');
+    qty.val('');
+    price.val('');
+}
+
+$('#item_page').eq(0).on('click', function (){
+    populateItemTable();
+});
+
 function generateItemCode(){
     itemApi.generateItemCode().then((code) => {
         itemCode.val(code);
@@ -37,6 +47,7 @@ addItem.eq(0).on('click', function (){
 
 function openItemModal(heading, buttonText, buttonClass, code) {
     if (code) {
+        console.log(code);
         itemApi.getItem(code)
             .then((code) => {
                 itemCode.val(code.itemCode);
@@ -81,24 +92,61 @@ saveUpdateBtn.eq(0).on('click',function (){
                     showConfirmButton: false,
                     timer: 1500
                 });
-                /*populateCustomerTable();
+                populateItemTable();
                 clearInputs();
-                generateCustomerId();*/
+                generateItemCode();
             })
-        }/*else {
-            customerApi.updateCustomer(customerModel).then((responseText)=>{
+        }else {
+            itemApi.updateItem(itemModel).then((responseText)=>{
                 Swal.fire({
                     icon: 'success',
-                    title: 'Customer Updated Successful',
+                    title: 'Item Updated Successful',
                     showConfirmButton: false,
                     timer: 1500
                 });
-                populateCustomerTable();
+                populateItemTable();
                 clearInputs();
             });
-        }*/
+        }
     }
-})
+});
+
+function populateItemTable(){
+    itemApi.getAllItem().then((itemDb) => {
+        // Log the response to check its structure
+        console.log("Response from getAllItem:", itemDb);
+
+        // Ensure itemDb is an array
+        if (Array.isArray(itemDb)) {
+            $('#item-table-body').eq(0).empty();
+            itemDb.forEach((item) => {
+                $('#item-table-body').eq(0).append(
+                    `<tr>
+                        <th row="span">${item.itemCode}</th>
+                        <td>${item.description}</td>
+                        <td>${item.qty}</td>
+                        <td>${item.price}</td>
+                        <td>
+                            <button class="updateBtn btn btn-warning btn-sm" data-toggle="modal" data-target="#studentModal"
+                                data-item-code="${item.itemCode}">
+                                <i class="fa-solid fa-pen-to-square fa-bounce"></i>
+                            </button>
+                            <button class="deleteBtn btn btn-danger btn-sm" data-item-code="${item.itemCode}">
+                                <i class="fa-solid fa-trash fa-bounce" style="color: #1E3050;"></i>
+                            </button>
+                        </td>
+                    </tr>`
+                );
+            });
+        } else {
+            console.error("Invalid response format. Expected an array.");
+            showError('Invalid Response', 'Unexpected data format from server.');
+        }
+    }).catch((error) => {
+        console.log(error);
+        showError('fetch Unsuccessful', error);
+    });
+}
 
 function validation(value, message, test) {
     if (!value) {
@@ -114,3 +162,43 @@ function validation(value, message, test) {
     }
     return true;
 }
+$('#item-table-body').eq(0).on('click','.deleteBtn', function (){
+    const code = $(this).data('item-code');
+    console.log(code);
+    deleteItem(code);
+});
+
+function deleteItem(code){
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Delete'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            itemApi.deleteItem(code)
+                .then((responseText) => {
+                    console.log("sahan");
+                    Swal.fire(
+                        responseText,
+                        'Successful',
+                        'success'
+                    );
+                    populateItemTable();
+                })
+                .catch((error) => {
+                    console.log(error);
+                    showError('Item delete Unsuccessful', error);
+                });
+        }
+    });
+}
+
+$('#item-table-body').eq(0).on('click','.updateBtn', function (){
+    const code = $(this).data('item-code');
+
+    openItemModal('Update Item','Update','btn-warning',code);
+})

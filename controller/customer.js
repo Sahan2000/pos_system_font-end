@@ -141,7 +141,6 @@ saveUpdateBtn.eq(0).on('click',function (){
 })
 
 customerPage.eq(0).on('click',function (){
-    console.log("hello lover");
     populateCustomerTable();
 })
 
