@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44706166-a4fe-4297-a22f-61c2eb349642" name="Changes" comment="complete crud operation customer form">
-      <change afterPath="$PROJECT_DIR$/api/itemApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/ItemModel.js" afterDir="false" />
+    <list default="true" id="44706166-a4fe-4297-a22f-61c2eb349642" name="Changes" comment="complete crud operation item form">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,22 +29,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sahan/IdeaProjects/Student-details-Page-frontend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/sahan/IdeaProjects/Student-details-Page-frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -68,6 +66,10 @@
       <workItem from="1705551329593" duration="8549000" />
       <workItem from="1705561457829" duration="14232000" />
       <workItem from="1705584914445" duration="6277000" />
+      <workItem from="1705634441314" duration="12202000" />
+      <workItem from="1705664017597" duration="79000" />
+      <workItem from="1706103978604" duration="318000" />
+      <workItem from="1706104325529" duration="377000" />
     </task>
     <task id="LOCAL-00001" summary="complete login page and sign up page">
       <option name="closed" value="true" />
@@ -125,7 +127,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705588519227</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="complete add item operation">
+      <option name="closed" value="true" />
+      <created>1705646435197</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705646435197</updated>
+    </task>
+    <task id="LOCAL-00009" summary="complete crud operation item form">
+      <option name="closed" value="true" />
+      <created>1705657279582</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705657279582</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +154,8 @@
     <MESSAGE value="few changes" />
     <MESSAGE value="complete save customer" />
     <MESSAGE value="complete crud operation customer form" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete crud operation customer form" />
+    <MESSAGE value="complete add item operation" />
+    <MESSAGE value="complete crud operation item form" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete crud operation item form" />
   </component>
 </project>

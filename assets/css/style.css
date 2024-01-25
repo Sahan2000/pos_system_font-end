@@ -12,10 +12,6 @@ video {
     background: linear-gradient(to top right, #dfdee0 0%, #fcfbfd 100%);
 }
 
-.btn-primary{
-    background-color: #1e3050;
-}
-
 @media all and (max-width: 980px){
     .card{
         width: 60% !important;
