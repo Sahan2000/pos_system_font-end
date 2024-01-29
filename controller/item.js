@@ -40,7 +40,6 @@ function generateItemCode(){
 }
 
 addItem.eq(0).on('click', function (){
-
     openItemModal('Add new Item', 'Save Item', 'btn-success')
     generateItemCode();
 });

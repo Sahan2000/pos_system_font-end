@@ -17,4 +17,23 @@ export class OrderApi{
             });
         });
     }
+
+    purchaseOrder(orderDetails){
+        return new Promise((resolve, reject) => {
+            let orderDetailsJson = JSON.stringify(orderDetails);
+            const sendAjax = (orderDetailsJsons) =>{
+                $.ajax({
+                    url:"http://localhost:8080/page/order",
+                    type:"POST",
+                    data: orderDetailsJson,
+                    contentType: "application/json",
+                    success:function (responseText){
+                        resolve(responseText);
+                    }
+                });
+            }
+            sendAjax(orderDetailsJson);
+
+        })
+    }
 }
