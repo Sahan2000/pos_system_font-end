@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44706166-a4fe-4297-a22f-61c2eb349642" name="Changes" comment="complete crud operation item form">
+    <list default="true" id="44706166-a4fe-4297-a22f-61c2eb349642" name="Changes" comment="complete placeOrder">
       <change afterPath="$PROJECT_DIR$/model/combineModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -78,7 +78,7 @@
       <workItem from="1706104325529" duration="377000" />
       <workItem from="1706340680583" duration="6322000" />
       <workItem from="1706412441668" duration="6687000" />
-      <workItem from="1706420102660" duration="5850000" />
+      <workItem from="1706420102660" duration="6139000" />
     </task>
     <task id="LOCAL-00001" summary="complete login page and sign up page">
       <option name="closed" value="true" />
@@ -152,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705657279582</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="complete placeOrder">
+      <option name="closed" value="true" />
+      <created>1706502310254</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706502310254</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +173,7 @@
     <MESSAGE value="complete crud operation customer form" />
     <MESSAGE value="complete add item operation" />
     <MESSAGE value="complete crud operation item form" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete crud operation item form" />
+    <MESSAGE value="complete placeOrder" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete placeOrder" />
   </component>
 </project>
